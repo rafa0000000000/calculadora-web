@@ -1,0 +1,101 @@
+/* cores do tema claro */
+body {
+  --fundo: #eeeeee;
+  --caixa: #ffffff;
+  --texto: #222222;
+  --botao: #dddddd;
+  --visor: #222222;
+  --visor-texto: #ffffff;
+
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  display: flex;            /* centraliza a calculadora */
+  justify-content: center;
+  padding: 20px;
+}
+
+/* cores do tema escuro (muda as variaveis de cima) */
+body.escuro {
+  --fundo: #121212;
+  --caixa: #1e1e1e;
+  --texto: #eeeeee;
+  --botao: #333333;
+  --visor: #000000;
+  --visor-texto: #ffffff;
+}
+
+/* caixa da calculadora */
+.calculadora {
+  width: 100%;         /* ocupa a tela toda no celular */
+  max-width: 320px;    /* mas no pc fica com no maximo 320px */
+  background: var(--caixa);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* visor */
+#visor {
+  background: var(--visor);
+  color: var(--visor-texto);
+  text-align: right;   /* numero fica na direita */
+  font-size: 1.8rem;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* botoes em 4 colunas */
+.teclas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* estilo dos botoes */
+button {
+  font-size: 1.2rem;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  background: var(--botao);
+  color: var(--texto);
+  cursor: pointer;
+}
+
+/* efeito quando passa o mouse */
+button:hover {
+  opacity: 0.8;
+}
+
+/* botao de igual azul */
+.igual {
+  background: #2a7de1;
+  color: #fff;
+}
+
+/* botao do tema */
+.tema {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+/* historico */
+.historico {
+  margin-top: 15px;
+}
+
+/* lista do historico com rolagem */
+.historico ul {
+  padding-left: 18px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* botao de limpar historico menor */
+.historico button {
+  font-size: 0.85rem;
+  padding: 6px;
+}
